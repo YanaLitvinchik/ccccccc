@@ -20,9 +20,18 @@ namespace Calc0._1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Calculator Calculator { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            Calculator = new Calculator();
+            DataContext = Calculate;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+
         }
     }
 }
